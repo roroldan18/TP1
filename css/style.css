@@ -1,10 +1,772 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: hotpink;
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@200;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-    color: gray;
-    font-size: 3em;
+menu ul li #menuProgramas {
+  visibility: hidden;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: white;
+  position: absolute;
+  border: 2px solid white;
+  background-color: #ba1200;
+  width: 20em;
 }
+
+#menu ul li:hover #menuProgramas {
+  visibility: initial;
+}
+
+#menu ul li:hover {
+  background-color: rgba(186, 18, 0, 0.6);
+}
+
+.inscribite:hover {
+  background-color: rgba(186, 18, 0, 0.6);
+}
+
+#menuProgramas li:hover {
+  background-color: red !important;
+}
+
+#menu ul li:active {
+  background-color: #501009;
+}
+
+.inscribite:active {
+  background-color: #501009;
+}
+
+.hamburguesa:active a {
+  color: #501009;
+}
+
+#menu ul .cruz-hamburguesa:active {
+  color: black;
+}
+
+menu h2:active {
+  background-color: #501009;
+}
+
+menu h2:hover {
+  background-color: #501009;
+}
+
+#menuProgramas li:active {
+  background-color: #501009 !important;
+}
+
+.letra1 {
+  grid-area: inicial1;
+}
+
+.letra2 {
+  grid-area: inicial2;
+}
+
+.letra3 {
+  grid-area: inicial3;
+  padding-right: 0.2em;
+}
+
+menu {
+  font-family: "Rokkitt", serif;
+}
+
+.fitnessDeCombate {
+  grid-area: frase;
+  font-size: 3.5em;
+  font-family: "Rokkitt", serif;
+  color: white;
+  padding: 0 0 1em 0.4em;
+  padding-left: 20px;
+}
+
+.inscribite {
+  grid-area: boton;
+  padding-left: 20px;
+  background-color: red;
+  -webkit-box-shadow: 0px 0px 15px 3px white;
+  box-shadow: 0px 0px 15px 3px #ba1200;
+  font-weight: 700;
+  border: none;
+  border-radius: 5em;
+  margin-left: 5em;
+  padding: 0;
+}
+
+.inscribite a {
+  font-family: "Rokkitt", serif;
+  color: black;
+}
+
+.card .content-card {
+  padding: 1em;
+}
+
+.card .content-card p {
+  padding-top: 1em;
+}
+
+.palabra1 {
+  grid-area: palabra1;
+}
+
+.palabra2 {
+  grid-area: palabra2;
+}
+
+.palabra3 {
+  grid-area: palabra3;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, right top, from(#110f0f), to(#beb7b1));
+  background: linear-gradient(to right, #110f0f, #beb7b1);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+menu h2 {
+  background-color: rgba(186, 18, 0, 0.6);
+}
+
+menu h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  background-color: #ba1200;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3em;
+}
+
+footer .logosRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+}
+
+footer .logosRedes i {
+  padding-right: 0.3em;
+  color: black;
+}
+
+.letras {
+  font-size: 9em;
+  font-family: "Rokkitt", serif;
+  font-weight: 800;
+  color: #ba1200;
+}
+
+.palabras {
+  font-size: 8em;
+  color: white;
+  font-family: "Rokkitt", serif;
+  padding-left: 20px;
+}
+
+@media (min-width: 801px) {
+  header img {
+    height: 10em;
+  }
+  menu {
+    background-color: red;
+    height: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 20px;
+  }
+  menu .hamburguesa {
+    display: none;
+  }
+  menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*#menuProgramas{
+                    visibility: hidden;
+                    padding: 0px;
+                    @include flex (column, center, flex-start);
+                    color: $color-menu;
+                    position: absolute;
+
+                    z-index:1;
+                    
+                    border: 2px solid $color-menu;
+                    background-color: $color-instructores;
+                    width: 20em;
+                }*/
+  }
+  menu ul li {
+    padding: 0 10px 0 10px;
+  }
+  menu ul li a {
+    text-decoration: none;
+    font-size: 35px;
+    color: white;
+  }
+  menu ul li .homeMenu {
+    font-weight: bold;
+  }
+  menu ul .cruz-hamburguesa {
+    display: none;
+  }
+  menu h2 {
+    position: absolute;
+    right: 1em;
+    font-size: 2em;
+    border: 5px ridge #ba1200;
+  }
+  #menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  /*
+    #menu ul li:hover #menuProgramas{
+        visibility: initial;    
+    }
+
+    #menu ul li:hover {
+        background-color: $color-instructores-inside;
+    }
+
+    .inscribite:hover {
+        background-color: $color-instructores-inside;
+    }
+
+    #menuProgramas li:hover {
+        background-color: $menu-fondo !important;
+    }
+*/
+  main {
+    width: 20%;
+    display: -ms-grid;
+    display: grid;
+    grid-template: "inicial1 palabra1 imagen" "inicial2 palabra2 imagen" "inicial3 palabra3 imagen" "vacio frase imagen" "vacio boton imagen";
+  }
+  main .fitnessDeCombate {
+    font-size: 3.5em;
+    font-family: "Rokkitt", serif;
+    color: white;
+    padding: 0 0 1em 0.4em;
+    padding-left: 20px;
+  }
+  main img {
+    grid-area: imagen;
+    height: 50em;
+  }
+  .inscribite {
+    width: 40em;
+    height: 8em;
+  }
+  .inscribite a {
+    font-size: 5.5em;
+  }
+  .palabras {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .letras {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .tarjetas {
+    padding: 8em 0 8em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .tarjetas .card {
+    width: 30em;
+    background-color: black;
+    -webkit-box-shadow: 0px 0px 15px 3px white;
+    box-shadow: 0px 0px 15px 3px white;
+  }
+  .tarjetas .card img {
+    width: 100%;
+    height: 20em;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .tarjetas .card .imgCapacitacion {
+    -o-object-position: 0px 86%;
+       object-position: 0px 86%;
+  }
+  .tarjetas .card .imgMapa {
+    -o-object-position: 0px 80%;
+       object-position: 0px 80%;
+  }
+  .tarjetas .card .imgMMF {
+    -o-object-position: 0px 50%;
+       object-position: 0px 50%;
+  }
+  .tarjetas .card a {
+    color: white;
+  }
+  .tarjetas .card .content-card h2 {
+    font-size: 2.4em;
+  }
+  .tarjetas .card .content-card p {
+    font-size: 1.3em;
+  }
+  footer {
+    height: 3em;
+  }
+}
+
+@media (min-width: 416px) and (max-width: 800px) {
+  header {
+    display: none;
+  }
+  .hamburguesa {
+    position: absolute;
+    top: 0.8em;
+    left: 1em;
+    font-size: 3em;
+  }
+  .hamburguesa a {
+    color: #ba1200;
+  }
+  #menu a {
+    color: white;
+  }
+  #menu ul {
+    background-color: #ba1200;
+    border: 3px ridge black;
+    padding: 0.6em;
+    list-style: none;
+    color: white;
+    position: absolute;
+    top: 2em;
+    left: -2em;
+    width: 0em;
+    opacity: 0;
+    -webkit-transition: opacity 1s, left 1s, width 1s;
+    transition: opacity 1s, left 1s, width 1s;
+  }
+  #menu ul li {
+    padding: 0.6em;
+  }
+  #menu ul li a {
+    color: white;
+    font-size: 1.2em;
+  }
+  #menu:target ul {
+    opacity: 1;
+    left: 2em;
+    width: 9em;
+  }
+  menu h2 {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 6em;
+    border: 0.1em ridge #ba1200;
+    border-radius: 1em;
+    font-size: 2em;
+    top: 1.4em;
+    right: 1em;
+  }
+  main {
+    padding: 8em 2em 5em 3em;
+    display: -ms-grid;
+    display: grid;
+    grid-template: "inicial1 palabra1" "inicial2 palabra2" "inicial3 palabra3" "vacio frase" "vacio boton";
+  }
+  main img {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    width: 100%;
+    opacity: 0.1;
+    z-index: -1;
+  }
+  .letra3 {
+    padding-left: 0.15em;
+  }
+  .inscribite {
+    width: 20em;
+    height: 4em;
+  }
+  .inscribite a {
+    font-size: 3.5em;
+  }
+  .letras {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .palabras {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0;
+  }
+  article {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  article img {
+    width: 100%;
+  }
+  article .card {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2em;
+    background-color: black;
+    -webkit-box-shadow: 0px 0px 15px 3px white;
+    box-shadow: 0px 0px 15px 3px white;
+  }
+  article .card a {
+    color: white;
+  }
+  footer {
+    height: 3em;
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 415px) {
+  header {
+    display: none;
+  }
+  .hamburguesa {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    font-size: 2em;
+  }
+  .hamburguesa a {
+    color: #ba1200;
+  }
+  #menu a {
+    color: white;
+  }
+  #menu ul {
+    background-color: #ba1200;
+    border: 3px ridge black;
+    padding: 0.6em;
+    list-style: none;
+    color: white;
+    position: absolute;
+    top: 2em;
+    left: -2em;
+    width: 0em;
+    opacity: 0;
+    -webkit-transition: opacity 1s, left 1s, width 1s;
+    transition: opacity 1s, left 1s, width 1s;
+  }
+  #menu ul li {
+    padding: 0.6em;
+  }
+  #menu ul li a {
+    color: white;
+    font-size: 1.2em;
+  }
+  #menu:target ul {
+    opacity: 1;
+    left: 2em;
+    width: 9em;
+  }
+  menu h2 {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 6em;
+    border: 0.1em ridge #ba1200;
+    border-radius: 1em;
+    font-size: 1em;
+    top: 2.4em;
+    right: 1em;
+  }
+  .inscribite {
+    width: 13em;
+    height: 3em;
+  }
+  .inscribite a {
+    font-size: 2.5em;
+  }
+  main {
+    padding: 5em 1em 5em 1em;
+    display: -ms-grid;
+    display: grid;
+    grid-template: "inicial1 palabra1" "inicial2 palabra2" "inicial3 palabra3" "vacio frase" "vacio boton";
+  }
+  main img {
+    position: absolute;
+    top: 3em;
+    left: 0;
+    width: 100%;
+    opacity: 0.1;
+    z-index: -2;
+    pointer-events: none;
+  }
+  .letra3 {
+    padding-left: 0.1em;
+  }
+  .letras {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 0.7em;
+    font-size: 6em;
+  }
+  .palabras {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0;
+    font-size: 5em;
+  }
+  .fitnessDeCombate {
+    display: none;
+  }
+  article {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  article img {
+    width: 100%;
+  }
+  article .card {
+    width: 80%;
+    margin: 2em;
+    background-color: black;
+    -webkit-box-shadow: 0px 0px 15px 3px white;
+    box-shadow: 0px 0px 15px 3px white;
+  }
+  article .card a {
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  article .card p {
+    display: none;
+  }
+  footer {
+    height: 3em;
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

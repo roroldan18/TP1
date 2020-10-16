@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@200;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+$color-menu: white;
+$menu-fondo: red;
+$menu-letras: 'Rokkitt', serif;
+$color-instructores-dark:rgb(80, 16, 9);
+$color-instructores: rgb(186, 18, 0);
+$color-instructores-inside:rgba(186, 18, 0, 0.6);
+$color-cards: black;
+
+@mixin background-cards(){
+    background-color: $color-cards;
+    -webkit-box-shadow: 0px 0px 15px 3px $color-menu;
+    -moz-box-shadow: 0px 0px 15px 3px $color-menu;
+    box-shadow: 0px 0px 15px 3px $color-menu;
+}
+
+@mixin flex ($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin padding-palabras (){
+    padding-left: 20px;
+}
+
+@mixin main-grid-web () {
+    display: grid;
+
+    grid-template:
+    "inicial1 palabra1 imagen"
+    "inicial2 palabra2 imagen"
+    "inicial3 palabra3 imagen"
+    "vacio frase imagen"
+    "vacio boton imagen"
+    ;
+}
+
+menu ul li #menuProgramas {
+    visibility: hidden;
+    padding: 0px;
+    @include flex (column, center, flex-start);
+    color: $color-menu;
+    position: absolute;
+    
+    border: 2px solid $color-menu;
+    background-color: $color-instructores;
+    width: 20em;
+}
+
+#menu ul li:hover #menuProgramas{
+    visibility: initial;    
+}
+
+#menu ul li:hover {
+    background-color: $color-instructores-inside;
+}
+
+.inscribite:hover {
+    background-color: $color-instructores-inside;
+}
+
+#menuProgramas li:hover {
+    background-color: $menu-fondo !important;
+}
+
+
+#menu ul li:active {
+    background-color: $color-instructores-dark;
+}
+
+.inscribite:active {
+    background-color: $color-instructores-dark;
+}
+
+.hamburguesa:active a{
+    color: $color-instructores-dark;
+}
+
+#menu ul .cruz-hamburguesa:active{
+    color: $color-cards;
+}
+
+menu h2:active {
+    background-color: $color-instructores-dark;
+}
+
+menu h2:hover {
+    background-color: $color-instructores-dark;
+}
+
+#menuProgramas li:active {
+    background-color: $color-instructores-dark !important;
+}
+
+
+@mixin main-grid-movil() {
+        display: grid;
+
+        grid-template:
+        "inicial1 palabra1"
+        "inicial2 palabra2"
+        "inicial3 palabra3"
+        "vacio frase"
+        "vacio boton"
+        ;
+}
+
+            
+.letra1 {
+    grid-area: inicial1;
+}
+.letra2 {
+    grid-area: inicial2;
+}
+.letra3 {
+    grid-area: inicial3;
+    padding-right: 0.2em;
+}
+
+menu {
+    font-family: $menu-letras;
+}
+
+.fitnessDeCombate {
+    grid-area:frase;
+    font-size: 3.5em;
+    font-family: $menu-letras;
+    color: $color-menu;
+    padding: 0 0 1em 0.4em;
+    @include padding-palabras();
+}
+
+.inscribite {
+    grid-area: boton;
+    @include padding-palabras();
+    background-color: $menu-fondo;
+    -webkit-box-shadow: 0px 0px 15px 3px $color-menu;
+    -moz-box-shadow: 0px 0px 15px 3px $color-menu;
+    box-shadow: 0px 0px 15px 3px $color-instructores;
+    font-weight: 700;
+    border: none;
+    border-radius: 5em;
+    margin-left: 5em;
+    padding: 0;
+    a {
+        font-family: $menu-letras;
+        color: $color-cards;
+    }
+}
+
+.card .content-card {
+    padding: 1em;
+    p   {
+        padding-top: 1em;
+        }
+    }
+
+.palabra1{
+    grid-area: palabra1;
+}
+.palabra2{
+    grid-area: palabra2;
+}
+.palabra3{
+    grid-area: palabra3;
+}
+
+
+body {
+    box-sizing: border-box;
+    background: linear-gradient(to right, rgb(17, 15, 15) , rgb(190, 183, 177));
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+menu h2{
+    background-color: $color-instructores-inside;
+    a{
+        text-decoration: none;
+        color: $color-menu
+    }
+}   
+
+footer {
+    background-color: $color-instructores;
+    @include flex (row, center, center);
+    font-size: 3em;
+    .logosRedes {
+        @include flex (row, center, center);
+        font-size: 1.2em;
+        i {
+            padding-right: 0.3em;
+            color: $color-cards;
+        }
+    }
+}
+
+
+.letras {
+    font-size: 9em  ;
+    font-family: $menu-letras;
+    font-weight: 800;
+    color: $color-instructores;
+}
+
+.palabras {
+    font-size: 8em;
+    color: $color-menu;
+    font-family: $menu-letras;
+    @include padding-palabras();
+}
+
+@media (min-width: 801px) {
+
+    header img{
+        height: 10em;
+    }
+
+
+    menu {
+        background-color: $menu-fondo;
+        height: 3em;
+        @include flex (row, space-between, center);
+        padding-right: 20px;
+        .hamburguesa {
+            display: none;
+        }
+        ul {
+            @include flex(row, flex-start, center);
+            li {
+                padding: 0 10px 0 10px;
+                a {
+                    text-decoration: none;
+                    font-size: 35px;
+                    color: $color-menu;
+                }               
+                .homeMenu {
+                    font-weight: bold;
+                    }
+                }
+                /*#menuProgramas{
+                    visibility: hidden;
+                    padding: 0px;
+                    @include flex (column, center, flex-start);
+                    color: $color-menu;
+                    position: absolute;
+
+                    z-index:1;
+                    
+                    border: 2px solid $color-menu;
+                    background-color: $color-instructores;
+                    width: 20em;
+                }*/
+            .cruz-hamburguesa {
+                display: none;
+            }
+
+        }
+
+        h2{
+            position: absolute;
+            right: 1em;
+            font-size: 2em;
+            border: 5px ridge $color-instructores;
+        }
+    }
+
+    #menu {
+        @include flex(row, space-between, center);
+    }
+/*
+    #menu ul li:hover #menuProgramas{
+        visibility: initial;    
+    }
+
+    #menu ul li:hover {
+        background-color: $color-instructores-inside;
+    }
+
+    .inscribite:hover {
+        background-color: $color-instructores-inside;
+    }
+
+    #menuProgramas li:hover {
+        background-color: $menu-fondo !important;
+    }
+*/
+
+    main {
+        width: 20%; 
+        @include main-grid-web();
+
+        .fitnessDeCombate {
+            font-size: 3.5em;
+            font-family: $menu-letras;
+            color: $color-menu;
+            padding: 0 0 1em 0.4em;
+            @include padding-palabras();
+        }
+    
+        img {
+            grid-area: imagen;
+            height: 50em;
+        }
+    }
+
+    .inscribite {
+        width: 40em;
+        height: 8em;
+        a {
+            font-size: 5.5em;
+        }
+    }
+    
+    .palabras{
+    @include flex (row, flex-start, center);
+    }
+
+    .letras {
+        @include flex (row, flex-end, center);
+    }
+
+    .tarjetas {
+        padding: 8em 0 8em 0;
+        @include flex (row, space-between, flex-start);
+        
+        .card {
+            width: 30em;
+            @include background-cards();
+            
+            img {
+                width: 100%;
+                height: 20em;
+                object-fit: cover;            
+            }
+
+            .imgCapacitacion {
+                object-position: 0px 86%;
+            }
+            .imgMapa {
+                object-position: 0px 80%;
+            }
+            .imgMMF {
+                object-position: 0px 50%;
+            }
+
+            a {
+                color: $color-menu;
+            }
+            .content-card {
+                h2  {
+                    font-size: 2.4em;
+                    }
+                p   {
+                    font-size: 1.3em;
+                    }
+                }
+            }
+    }
+    footer {
+        height: 3em;
+    }
+}
+
+@media (min-width:416px) and (max-width: 800px) {
+
+    header{
+        display: none;
+    }
+
+    .hamburguesa {
+        position: absolute;
+        top: 0.8em;
+        left: 1em;
+        font-size: 3em;
+        a {
+            color: $color-instructores;
+        }    
+    }
+
+
+    #menu {
+        a {
+            color: $color-menu;
+        }
+        ul{
+            background-color: $color-instructores;
+            border: 3px ridge $color-cards;
+            padding: 0.6em;
+            list-style: none;
+            color: white;
+            position: absolute;
+            top: 2em;
+            left: -2em;
+            width: 0em;
+            opacity: 0;
+            transition: opacity 1s, left 1s, width 1s;
+
+            li {
+                padding: 0.6em;
+
+                a {
+                    color: $color-menu;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    #menu:target ul{
+        opacity: 1;
+        left: 2em;
+        width: 9em;
+    }
+
+    menu h2 { 
+        position: absolute;
+        @include flex(row, center, center);
+        width: 6em;
+        border: 0.1em ridge $color-instructores;
+        border-radius: 1em;
+        font-size: 2em;
+        top: 1.4em;
+        right: 1em;
+    }
+
+    main {
+        padding: 8em 2em 5em 3em;
+        @include main-grid-movil();
+
+        img {
+            position:absolute;
+            top:3em;
+            left: 0;
+            width: 100%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+    }
+
+    .letra3 {
+        padding-left: 0.15em;
+    }
+
+    .inscribite {
+        width: 20em;
+        height: 4em;
+        a {
+            font-size: 3.5em;
+        }
+    }
+    
+    .letras {
+    @include flex (row, flex-start, center)
+    }
+
+    .palabras {
+        @include flex (row, flex-start, center);
+        padding-left: 0;
+    }
+
+
+    article {
+        width: 100%;
+        @include flex(column, center, center);
+        img {
+            width: 100%;
+        }
+        .card {
+            width: 80%;
+            @include flex(row, center, center);
+            margin: 2em;
+            @include background-cards();
+
+            a {
+                color: $color-menu;
+            }
+        }
+    }
+    footer {
+        height: 3em;
+        font-size: 2em;
+    }
+}
+
+
+
+
+@media (max-width: 415px) {
+    
+    header{
+        display: none;
+    }
+
+    .hamburguesa {
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        font-size: 2em;
+        a {
+            color: $color-instructores;
+        }    
+    }
+    
+
+    #menu {
+        a {
+            color: $color-menu;
+        }
+        ul{
+            background-color: $color-instructores;
+            border: 3px ridge $color-cards;
+            padding: 0.6em;
+            list-style: none;
+            color: white;
+            position: absolute;
+            top: 2em;
+            left: -2em;
+            width: 0em;
+            opacity: 0;
+            transition: opacity 1s, left 1s, width 1s;
+
+            li {
+                padding: 0.6em;
+
+                a {
+                    color: $color-menu;
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    #menu:target ul{
+        opacity: 1;
+        left: 2em;
+        width: 9em;
+    }
+
+    menu h2 { 
+        position: absolute;
+        @include flex(row, center, center);
+        width: 6em;
+        border: 0.1em ridge $color-instructores;
+        border-radius: 1em;
+        font-size: 1em;
+        top: 2.4em;
+        right: 1em;
+    }
+
+
+    .inscribite {
+        width: 13em;
+        height: 3em;
+        a {
+            font-size: 2.5em;
+        }
+    }
+
+
+    main {
+        padding: 5em 1em 5em 1em;
+        @include main-grid-movil();
+
+        img {
+            position:absolute;
+            top:3em;
+            left: 0;
+            width: 100%;
+            opacity: 0.1;
+            z-index: -2;
+            pointer-events: none;
+        }
+    }
+
+    .letra3 {
+        padding-left: 0.1em;
+    }
+    
+    .letras {
+    @include flex (row, flex-start, center);
+    margin-left: 0.7em;
+    font-size: 6em;
+    }
+
+    .palabras {
+        @include flex (row, flex-start, center);
+        padding-left: 0;
+        font-size: 5em;
+    }
+
+    .fitnessDeCombate {
+        display: none;
+    }
+
+
+
+    article {
+        width: 100%;
+        @include flex(column, center, center);
+        img {
+            width: 100%;
+        }
+        .card {
+            width: 80%;
+            margin: 2em;
+            @include background-cards();
+            a {
+                color: $color-menu;
+                @include flex(row, center, center);
+            }
+            p {
+                display: none;
+            }
+        }
+    }
+
+
+
+    footer {
+        height: 3em;
+        font-size: 1em;
+    }
+}
