@@ -1,4 +1,4 @@
 # TP1
 TrabajoPractico1
 
-This is a Readme.md file.
+Un modelo de página estatica con HTML y SASS.-
